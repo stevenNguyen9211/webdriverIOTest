@@ -1,6 +1,7 @@
 node_modules/
 logs/
 screenshots/
+html-reports/
 dist/
 .DS_Store
 *.log

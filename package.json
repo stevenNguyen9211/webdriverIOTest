@@ -1,18 +1,38 @@
 {
-  "name": "webdriverio-appium-android-demo",
+  "name": "webdriverio-multi-platform-demo",
   "version": "1.0.0",
-  "description": "WebDriverIO + Appium Android Testing Demo",
+  "description": "WebDriverIO Multi-Platform Testing: Android Mobile + Web Browser",
   "main": "index.js",
   "scripts": {
-    "test": "wdio run ./config/wdio.conf.ts",
-    "test:android": "wdio run ./config/wdio.conf.ts"
+    "test": "npm run test:web",
+    "test:android": "wdio run ./config/wdio.conf.ts",
+    "test:web": "wdio run ./config/wdio.web.conf.ts",
+    "test:ios": "wdio run ./config/wdio.ios.conf.ts",
+    "test:all": "npm run test:android && npm run test:ios && npm run test:web",
+    "test:web-chrome": "wdio run ./config/wdio.web.conf.ts --spec test/web/**/*.spec.ts",
+    "test:web-login": "wdio run ./config/wdio.web.conf.ts --spec test/web/login.spec.ts",
+    "test:web-forms": "wdio run ./config/wdio.web.conf.ts --spec test/web/form-interactions.spec.ts",
+    "test:web-navigation": "wdio run ./config/wdio.web.conf.ts --spec test/web/navigation.spec.ts",
+    "test:web-ui": "wdio run ./config/wdio.web.conf.ts --spec test/web/ui-interactions.spec.ts",
+    "test:ios-launch": "wdio run ./config/wdio.ios.conf.ts --spec test/ios/launchTest.spec.ts",
+    "test:ios-basic": "wdio run ./config/wdio.ios.conf.ts --spec test/ios/basic-interactions.spec.ts",
+    "test:ios-ui": "wdio run ./config/wdio.ios.conf.ts --spec test/ios/ui-elements.spec.ts",
+    "report:open": "open html-reports/",
+    "report:web": "open html-reports/web-report.html",
+    "report:android": "open html-reports/android-report.html",
+    "report:ios": "open html-reports/ios-report.html"
   },
   "keywords": [
     "webdriverio",
     "appium",
     "android",
     "mobile",
-    "testing"
+    "web",
+    "browser",
+    "selenium",
+    "testing",
+    "automation",
+    "typescript"
   ],
   "author": "",
   "license": "MIT",
@@ -29,8 +49,13 @@
     "@wdio/types": "^9.19.2",
     "appium": "^3.0.2",
     "appium-uiautomator2-driver": "^5.0.3",
+    "appium-xcuitest-driver": "^10.1.2",
     "chai": "^6.0.1",
+    "chromedriver": "^140.0.4",
+    "edgedriver": "^6.1.2",
+    "geckodriver": "^6.0.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "wdio-html-nice-reporter": "^8.1.7"
   }
 }

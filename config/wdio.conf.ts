@@ -2,7 +2,7 @@ export const config = {
     runner: 'local',
     port: 4723,
     specs: [
-        'test/**/*.spec.ts'
+        'test/mobile/**/*.spec.ts'
     ],
     tsConfigPath: './tsconfig.json',
     exclude: [],
@@ -37,7 +37,18 @@ export const config = {
         }]
     ],
     framework: 'mocha',
-    reporters: ['spec'],
+    reporters: [
+        'spec',
+        ['html-nice', {
+            outputDir: './html-reports/',
+            filename: 'android-report.html',
+            reportTitle: 'Android Test Report',
+            linkScreenshots: true,
+            showInBrowser: false,
+            collapseTests: false,
+            useOnAfterCommandForScreenshot: false
+        }]
+    ],
     mochaOpts: {
         ui: 'bdd',
         timeout: 60000
