@@ -2,6 +2,10 @@ node_modules/
 logs/
 screenshots/
 html-reports/
+
+# Scripts
+fix-commits.sh
+commit-clean.sh
 dist/
 .DS_Store
 *.log

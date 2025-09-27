@@ -17,7 +17,9 @@
       "Bash(npm run test:web-login:*)",
       "WebSearch",
       "WebFetch(domain:webdriver.io)",
-      "Bash(npm uninstall:*)"
+      "Bash(npm uninstall:*)",
+      "Bash(chmod:*)",
+      "Bash(./fix-commits.sh)"
     ],
     "deny": [],
     "ask": []
