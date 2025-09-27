@@ -40,7 +40,7 @@ export const config = {
     reporters: [
         'spec',
         ['html-nice', {
-            outputDir: './html-reports/',
+            outputDir: './html-reports/android/',
             filename: 'android-report.html',
             reportTitle: 'Android Test Report',
             linkScreenshots: true,

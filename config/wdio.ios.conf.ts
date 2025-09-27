@@ -2,16 +2,16 @@ export const config = {
     runner: 'local',
     port: 4723,
     specs: [
-        'test/ios/**/*.spec.ts'
+        './test/ios/**/*.spec.ts'
     ],
     tsConfigPath: './tsconfig.json',
     exclude: [],
     maxInstances: 1,
     capabilities: [{
         platformName: 'iOS',
-        'appium:deviceName': 'iPhone15prmBlue',        // Optional: device name
-        'appium:udid': '00008130-00161C620EE3803A',     // Required for real device
-        'appium:platformVersion': '18.6.2',            // iOS version, can be empty ""
+        'appium:deviceName': 'iPhone',        // Optional: device name
+        'appium:udid': '86CF7C8A-5CA3-4795-AA76-D59CAC9A8214',     // Required for real device
+        'appium:platformVersion': '26.0',            // iOS version, can be empty ""
         'appium:automationName': 'XCUITest',
 
         // App configuration - choose one method:
@@ -22,9 +22,9 @@ export const config = {
         // 'appium:app': '/absolute/path/to/YourApp.ipa',
 
         // Required for real device testing (code signing)
-        'appium:xcodeOrgId': '66Z2CMZ549',
-        'appium:xcodeSigningId': 'Apple Development',   // Must match Xcode signing identity
-        'appium:updatedWDABundleId': 'nguyen.homecapp.WebDriverAgentRunner',
+        //'appium:xcodeOrgId': '66Z2CMZ549',
+        //'appium:xcodeSigningId': 'Apple Development',   // Must match Xcode signing identity
+        //'appium:updatedWDABundleId': 'nguyen.homecapp.WebDriverAgentRunner',
 
         // Optional settings
         'appium:autoGrantPermissions': true,
@@ -35,12 +35,13 @@ export const config = {
         'appium:wdaConnectionTimeout': 120000,          // WebDriverAgent connection timeout (ms)
 
         // Performance settings
-        'appium:usePrebuiltWDA': true,                  // Use existing WebDriverAgent
+        'appium:usePrebuiltWDA': false,                 // Build fresh WebDriverAgent
         'appium:derivedDataPath': '/tmp/wda',           // Custom derived data path
-        'appium:useSimpleBuildTest': false,             // Disable for complex apps
+        'appium:useSimpleBuildTest': true,              // Use simple build for compatibility
 
         // Debugging options
-        'appium:showIOSLog': false,                     // Show iOS device logs
+        'appium:showIOSLog': true,                      // Show iOS device logs
+        'appium:showXcodeLog': true,                    // Show Xcode build logs
         'appium:realDeviceLogger': '/usr/local/lib/node_modules/deviceconsole/deviceconsole',
         'appium:clearSystemFiles': false,               // Don't clear system files
     }],
@@ -55,7 +56,7 @@ export const config = {
             command: 'appium',
             args: {
                 'base-path': '/',
-                address: 'localhost',
+                address: '0.0.0.0',
                 port: 4723,
                 'relaxed-security': true,
                 'log-level': 'info'
@@ -67,7 +68,7 @@ export const config = {
     reporters: [
         'spec',
         ['html-nice', {
-            outputDir: './html-reports/',
+            outputDir: './html-reports/ios/',
             filename: 'ios-report.html',
             reportTitle: 'iOS Test Report',
             linkScreenshots: true,

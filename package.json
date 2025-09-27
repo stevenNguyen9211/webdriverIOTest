@@ -18,9 +18,13 @@
     "test:ios-basic": "wdio run ./config/wdio.ios.conf.ts --spec test/ios/basic-interactions.spec.ts",
     "test:ios-ui": "wdio run ./config/wdio.ios.conf.ts --spec test/ios/ui-elements.spec.ts",
     "report:open": "open html-reports/",
-    "report:web": "open html-reports/web-report.html",
-    "report:android": "open html-reports/android-report.html",
-    "report:ios": "open html-reports/ios-report.html"
+    "report:web": "open html-reports/web/web-report.html",
+    "report:android": "open html-reports/android/android-report.html",
+    "report:ios": "open html-reports/ios/ios-report.html",
+    "report:ios-enhanced": "node scripts/generateEnhancedReport.js ios && open html-reports/ios/ios-report-enhanced.html",
+    "report:android-enhanced": "node scripts/generateEnhancedReport.js android && open html-reports/android/android-report-enhanced.html",
+    "report:web-enhanced": "node scripts/generateEnhancedReport.js web && open html-reports/web/web-report-enhanced.html",
+    "report:generate-enhanced": "node scripts/generateEnhancedReport.js"
   },
   "keywords": [
     "webdriverio",

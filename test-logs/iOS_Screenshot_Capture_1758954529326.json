@@ -1,0 +1,61 @@
+{
+  "testName": "iOS Screenshot Capture",
+  "totalSteps": 7,
+  "timestamp": "2025-09-27T06:28:49.326Z",
+  "steps": [
+    {
+      "step": 1,
+      "action": "START",
+      "description": "Test started: iOS Screenshot Capture",
+      "timestamp": "2025-09-27T06:28:48.968Z",
+      "status": "info"
+    },
+    {
+      "step": 2,
+      "action": "SETUP",
+      "description": "Starting screenshot capture test",
+      "timestamp": "2025-09-27T06:28:48.968Z",
+      "status": "info"
+    },
+    {
+      "step": 3,
+      "action": "CAPTURE",
+      "description": "Taking screenshot of current app state",
+      "timestamp": "2025-09-27T06:28:48.968Z",
+      "status": "info"
+    },
+    {
+      "step": 4,
+      "action": "VERIFY",
+      "description": "Verifying screenshot was captured successfully",
+      "timestamp": "2025-09-27T06:28:49.158Z",
+      "status": "info"
+    },
+    {
+      "step": 5,
+      "action": "SUCCESS",
+      "description": "Screenshot captured and saved successfully",
+      "timestamp": "2025-09-27T06:28:49.158Z",
+      "status": "success",
+      "details": {
+        "screenshotPath": "./screenshots/ios_launch_test.png",
+        "screenshotSize": "975070 bytes"
+      }
+    },
+    {
+      "step": 6,
+      "action": "DEMO",
+      "description": "Demonstrating step-by-step screenshot capture",
+      "timestamp": "2025-09-27T06:28:49.326Z",
+      "status": "info",
+      "screenshot": "./screenshots/step_6_1758954529158.png"
+    },
+    {
+      "step": 7,
+      "action": "END",
+      "description": "Test completed: PASSED",
+      "timestamp": "2025-09-27T06:28:49.326Z",
+      "status": "success"
+    }
+  ]
+}
