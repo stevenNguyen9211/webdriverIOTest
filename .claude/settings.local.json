@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npx tsc --noEmit)",
+      "Bash(npx wdio:*)",
+      "Bash(npm outdated)",
+      "Bash(npm ls:*)",
+      "Bash(npm update:*)",
+      "Bash(npx appium driver:*)",
+      "Bash(git init:*)",
+      "Bash(git remote add:*)",
+      "Bash(git branch:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
