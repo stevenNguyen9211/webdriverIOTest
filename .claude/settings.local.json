@@ -19,7 +19,18 @@
       "WebFetch(domain:webdriver.io)",
       "Bash(npm uninstall:*)",
       "Bash(chmod:*)",
-      "Bash(./fix-commits.sh)"
+      "Bash(./fix-commits.sh)",
+      "Bash(appium:*)",
+      "Bash(xcrun simctl list:*)",
+      "Bash(instruments -s:*)",
+      "Bash(lsof:*)",
+      "Bash(npm run test:ios:*)",
+      "Bash(xargs kill:*)",
+      "Bash(xcodebuild:*)",
+      "Bash(xcode-select:*)",
+      "Bash(open:*)",
+      "Bash(npm run report:ios:*)",
+      "Bash(node:*)"
     ],
     "deny": [],
     "ask": []

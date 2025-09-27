@@ -36,7 +36,7 @@ export const config = {
     reporters: [
         'spec',
         ['html-nice', {
-            outputDir: './html-reports/',
+            outputDir: './html-reports/web/',
             filename: 'web-report.html',
             reportTitle: 'Web Test Report',
             linkScreenshots: true,
